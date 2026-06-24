@@ -1,346 +1,446 @@
 <div align="center">
 
-# -- ! Pattern Generator & Number Analyzer ! --
-### *Interactive Console-Based Pattern Printing & Number Range Analysis*
+# 🔺 Pattern Generator & Number Analyzer
+### Interactive Python Console Application Using Loops, Conditions and Pattern Printing
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Loops](https://img.shields.io/badge/Loops-Nested%20For%2FWhile-FF6F00?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Console](https://img.shields.io/badge/Console-Interactive%20CLI-4CAF50?style=for-the-badge&logo=windowsterminal&logoColor=white)](https://www.python.org/)
-[![Math](https://img.shields.io/badge/Math-Arithmetic%20%26%20Logic-9C27B0?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![CLI](https://img.shields.io/badge/Console-Application-4CAF50?style=for-the-badge)
+![Beginner](https://img.shields.io/badge/Level-Beginner-orange?style=for-the-badge)
 
-<br/>
-
-> *"Loops are the heartbeat of programming — master them, and patterns become poetry."*
+> "Programming becomes easier when you master loops and logic."
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+# 📋 Table of Contents
 
-- [📌 Overview](#-overview)
-- [🎯 Problem Statement](#-problem-statement)
-- [✨ Key Features](#-key-features)
-- [🏗️ Project Structure](#️-project-structure)
-- [🔄 Project Workflow](#-project-workflow)
-- [🔺 Part A — Pattern Generation](#-part-a--pattern-generation)
-- [🔢 Part B — Number Analysis](#-part-b--number-analysis)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📈 Results & Insights](#-results--insights)
-- [🏆 Advantages](#-advantages)
-- [📄 License](#-license)
-- [👤 Author](#-author)
-- [🙏 Acknowledgements](#-acknowledgements)
-
----
-
-## 📌 Overview
-
-The **Pattern Generator & Number Analyzer** is a beginner-friendly, interactive Python console application that demonstrates core programming concepts such as **nested loops**, **conditional logic**, **user input handling**, and **arithmetic operations**. The program presents a menu-driven interface that runs continuously until the user chooses to exit.
-
-This project is designed to:
-- Strengthen understanding of nested `for` loops and `while` loops
-- Practice user input validation and menu-driven program design
-- Apply mathematical logic to analyze ranges of numbers
-- Produce visually structured star patterns in the console
+- Overview
+- Problem Statement
+- Features
+- Project Structure
+- Workflow
+- Pattern Generator
+- Number Analyzer
+- Source Code Concepts
+- Sample Output
+- Tech Stack
+- Learning Outcomes
+- Advantages
+- Author
+- License
 
 ---
 
-## 🎯 Problem Statement
+# 📌 Overview
 
-> **Objective:** Build a console-based interactive tool to generate star patterns and analyze number ranges.
+The **Pattern Generator & Number Analyzer** is a menu-driven Python console application that allows users to:
 
-You are building a simple utility program for students learning Python. The program must accept user choices from a menu and execute the corresponding task — either rendering a visual star pattern or analyzing a numeric range for properties like even/odd classification and sum computation.
+- Generate star patterns
+- Analyze numbers as Even or Odd
+- Calculate the sum of a number range
+- Work with loops, conditions and user input
 
-| 📂 Feature | 📄 Type | 🔍 Description |
-|------------|---------|----------------|
-| Pattern Generator | Console Output | Prints star-based ASCII patterns |
-| Right-angled Triangle | Pattern | Stars increase row by row from left |
-| Pyramid | Pattern | Centered stars with leading spaces |
-| Left-angled Triangle | Pattern | Right-aligned stars with indentation |
-| Number Analyzer | Logic | Classifies numbers and computes sum |
+The program continuously runs until the user chooses to exit.
 
-The goal is to demonstrate **fundamental Python programming skills** through a clean, menu-driven interactive program.
+This project is designed to strengthen understanding of:
+
+- Nested Loops
+- Conditional Statements
+- Menu Driven Programs
+- Pattern Printing
+- Arithmetic Operations
 
 ---
 
-## ✨ Key Features
+# 🎯 Problem Statement
+
+Create a Python application that provides two major functionalities:
+
+### 1. Pattern Generator
+
+Generate a star pattern based on the number of rows entered by the user.
+
+### 2. Number Analyzer
+
+Analyze numbers within a given range and:
+
+- Identify Even numbers
+- Identify Odd numbers
+- Calculate the total sum
+
+The application should continue running until the user selects Exit.
+
+---
+
+# ✨ Features
 
 | Feature | Description |
-|--------|-------------|
-| 🔁 **Infinite Menu Loop** | Program runs continuously until user selects Exit |
-| 🔺 **3 Pattern Types** | Right Triangle, Pyramid, and Left Triangle using nested loops |
-| 🔢 **Number Range Analysis** | Classifies each number in a range as Even or Odd |
-| ➕ **Running Sum** | Computes and displays cumulative sum of the analyzed range |
-| 🖥️ **CLI Interface** | Simple, clean text-based menu for user interaction |
-| ✅ **Input-Driven Flow** | Fully driven by user input with branching via `if-elif-else` |
-| ⚠️ **Invalid Input Handling** | Detects and reports invalid menu or pattern choices |
-| 📐 **Space Alignment** | Pyramid and Left Triangle use calculated spacing for alignment |
+|----------|-------------|
+| 🔺 Pattern Generation | Creates star patterns using nested loops |
+| 🔢 Number Analysis | Identifies Even and Odd numbers |
+| ➕ Sum Calculation | Calculates total sum of numbers |
+| 🔁 Infinite Loop | Menu repeats until Exit is selected |
+| ⚡ Fast Execution | Runs instantly in terminal |
+| 🎓 Beginner Friendly | Easy-to-understand logic |
+| 🖥️ Console Based | No GUI required |
+| ❌ Invalid Choice Handling | Detects wrong menu input |
 
 ---
 
-## 🏗️ Project Structure
+# 🏗️ Project Structure
 
-```
-📦 pattern-number-analyzer/
+```text
+📦 Pattern-Generator-And-Number-Analyzer
 │
-├── 📄 project-2.py          ← Main Python script (entry point)
+├── 📄 P-2.py
 │
-└── 📄 README.md             ← Project documentation
+└── 📄 README.md
 ```
 
 ---
 
-## 🔄 Project Workflow
+# 🔄 Program Workflow
 
-```
-Program Start
+```text
+Start Program
       │
       ▼
-┌─────────────────────────────┐
-│   Display Main Menu         │  ← Options: Pattern / Analyze / Exit
-└────────────┬────────────────┘
-             │
-     ┌───────┴────────┐
-     ▼                ▼
-┌─────────────┐   ┌──────────────────┐
-│  Choice: 1  │   │    Choice: 2     │
-│  (Pattern)  │   │  (Analyze Range) │
-└──────┬──────┘   └────────┬─────────┘
-       │                   │
-       ▼                   ▼
-┌─────────────┐   ┌──────────────────┐
-│ Choose Type │   │ Input Start/End  │
-│ 1/2/3       │   │ Even/Odd + Sum   │
-└──────┬──────┘   └────────┬─────────┘
-       │                   │
-       ▼                   ▼
-┌─────────────────────────────┐
-│   Print Output to Console   │
-└────────────┬────────────────┘
-             │
-             ▼
-     Loop Back to Menu
-             │
-      (Choice: 3) Exit ✅
+Display Main Menu
+      │
+      ▼
+┌─────────────────┐
+│ 1. Pattern      │
+│ 2. Analysis     │
+│ 3. Exit         │
+└─────────────────┘
+      │
+      ▼
+User Choice
+      │
+ ┌────┴────┐
+ ▼         ▼
+Pattern   Analysis
+  │          │
+  ▼          ▼
+Print      Even/Odd
+Stars      Detection
+  │          │
+  ▼          ▼
+Return To Menu
+      │
+      ▼
+Exit Program
 ```
 
 ---
 
-## 🔺 Part A — Pattern Generation
+# 🔺 Pattern Generator
 
-### 📝 1. What is Pattern Printing?
+The Pattern Generator creates a left-aligned triangular star pattern using nested loops.
 
-Pattern printing is a classic programming exercise that uses **nested loops** to produce visual arrangements of characters. It builds intuition for loop control, indentation, and how rows and columns relate to iteration counts.
+### Logic
 
----
-
-### 🗺️ 2. Pattern Types — Overview
-
-| Pattern | Shape | Logic Used |
-|---------|-------|------------|
-| 1️⃣ | **Right-angled Triangle** | Outer loop for rows, inner loop prints `i` stars |
-| 2️⃣ | **Pyramid** | Leading spaces decrease, stars follow `2*i - 1` formula |
-| 3️⃣ | **Left-angled Triangle** | Leading spaces decrease, stars increase by row |
-
----
-
-### 🔺 3. Right-angled Triangle
-
-> Stars increase with each row, aligned to the left.
-
-**Logic:**
 ```python
-for i in range(1, rows + 1):
-    for j in range(i):
-        print("*", end=" ")
-    print()
-```
-
-**Output (rows = 4):**
-```
-* 
-* * 
-* * * 
-* * * * 
-```
-
----
-
-### 🏔️ 4. Pyramid Pattern
-
-> Centered pyramid using leading spaces and an odd number of stars per row.
-
-**Logic:**
-```python
-for i in range(1, rows + 1):
-    for j in range(rows - i):      # Leading spaces
+for i in range(1, n + 1):
+    for _ in range(n - i):
         print(" ", end=" ")
-    for k in range(2 * i - 1):     # Stars: 1, 3, 5, ...
+
+    for j in range(1, i + 1):
         print("*", end=" ")
+
     print()
 ```
 
-**Output (rows = 4):**
+---
+
+## Sample Pattern
+
+Input:
+
+```text
+Rows = 5
 ```
-      * 
-    * * * 
-  * * * * * 
-* * * * * * * 
+
+Output:
+
+```text
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
 ```
 
 ---
 
-### 🔻 5. Left-angled Triangle
+# 🔢 Number Analyzer
 
-> Right-aligned triangle using indentation that decreases per row.
+The Number Analyzer accepts a start and end number and performs:
 
-**Logic:**
+### Even Number Detection
+
 ```python
-for i in range(1, rows + 1):
-    for j in range(rows - i):      # Leading spaces
-        print(" ", end=" ")
-    for k in range(i):             # Stars increase
-        print("*", end=" ")
-    print()
+if i % 2 == 0:
 ```
 
-**Output (rows = 4):**
-```
-      * 
-    * * 
-  * * * 
-* * * * 
-```
+### Odd Number Detection
 
----
-
-## 🔢 Part B — Number Analysis
-
-### 🔍 6. Number Range Analyzer
-
-> Iterates over a user-defined range and classifies each number as Even or Odd, then computes the total sum.
-
-**Logic:**
 ```python
-for i in range(start, end + 1):
-    if i % 2 == 0:
-        print(f'Number {i} is Even.')
-    else:
-        print(f'Number {i} is Odd.')
-    sum = sum + i
-
-print(f'Sum of all numbers from {start} to {end} is: {sum}')
+else:
 ```
 
-**Key Concepts Used:**
+### Sum Calculation
 
-| Concept | Detail |
-|---------|--------|
-| 🔁 `range(start, end+1)` | Inclusive range iteration |
-| ➗ Modulus `%` Operator | `i % 2 == 0` → Even check |
-| ➕ Accumulator Pattern | Running total using `sum = sum + i` |
-| 🖨️ f-strings | Formatted output with variable interpolation |
-
-**Sample Output (range 1 to 5):**
-```
-Number 1 is Odd.
-Number 2 is Even.
-Number 3 is Odd.
-Number 4 is Even.
-Number 5 is Odd.
-Sum of all numbers from 1 to 5 is: 15
+```python
+count += i
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Sample Analysis
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| 🐍 **Python** | 3.8+ | Core programming language |
-| 🔁 **While Loop** | Built-in | Infinite menu loop control |
-| 🔂 **For Loop** | Built-in | Row and column iteration for patterns |
-| 🧮 **Arithmetic Operators** | Built-in | Modulus, addition, multiplication |
-| 🖨️ **print() / input()** | Built-in | Console I/O and user interaction |
-| 📐 **f-strings** | Python 3.6+ | Formatted string output |
+Input:
+
+```text
+Start Number = 21
+End Number = 26
+```
+
+Output:
+
+```text
+21 is Odd Number.
+22 is Even Number.
+23 is Odd Number.
+24 is Even Number.
+25 is Odd Number.
+26 is Even Number.
+
+Sum of all numbers : 141
+```
 
 ---
 
-## 📈 Results & Insights
+# 📚 Concepts Used
 
-After running the program, the following outputs are produced:
+## 1️⃣ While Loop
 
-- ✅ **3 Distinct Star Patterns** — Right Triangle, Pyramid, and Left-angled Triangle
-- 🔢 **Even/Odd Classification** — Every integer in the user-specified range is labeled
-- ➕ **Range Sum** — Accurate cumulative sum displayed at the end of each analysis
-- 🔁 **Persistent Menu** — Program loops back after every task until manually exited
-- ⚠️ **Error Feedback** — Invalid choices trigger a clear "Invalid Choice!" message
+Keeps displaying the menu until Exit is selected.
+
+```python
+while True:
+```
 
 ---
 
-## 🏆 Advantages
+## 2️⃣ Match Case Statement
+
+Used for menu selection.
+
+```python
+match choice:
+```
+
+---
+
+## 3️⃣ Nested Loops
+
+Used for pattern generation.
+
+```python
+for i in range():
+    for j in range():
+```
+
+---
+
+## 4️⃣ Conditional Statements
+
+Used for Even/Odd checking.
+
+```python
+if i % 2 == 0:
+```
+
+---
+
+## 5️⃣ Arithmetic Operations
+
+Used for sum calculation.
+
+```python
+count += i
+```
+
+---
+
+# 💻 Source Code Highlights
+
+### Pattern Generation
+
+```python
+case 1:
+```
+
+Generates star patterns using nested loops.
+
+---
+
+### Number Analysis
+
+```python
+case 2:
+```
+
+Checks Even/Odd numbers and calculates total sum.
+
+---
+
+### Exit Option
+
+```python
+case 3:
+```
+
+Terminates the program.
+
+---
+
+### Invalid Choice
+
+```python
+case _:
+```
+
+Displays an error message when an invalid menu option is selected.
+
+---
+
+# 🖥️ Sample Output
+
+```text
+Welcome to Pattern generator and Number analyzer!
+
+1. Pattern generate
+2. Number analysis
+3. Exit
+
+enter your choice : 1
+
+enter the number of rows : 5
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+1. Pattern generate
+2. Number analysis
+3. Exit
+
+enter your choice : 2
+
+enter start number : 21
+enter end number : 26
+
+21 is Odd Number.
+22 is Even Number.
+23 is Odd Number.
+24 is Even Number.
+25 is Odd Number.
+26 is Even Number.
+
+Sum of all numbers : 141
+
+1. Pattern generate
+2. Number analysis
+3. Exit
+
+enter your choice : 3
+
+Thank You, Visit Again.
+```
+
+---
+
+# 🛠️ Tech Stack
+
+| Tool | Purpose |
+|--------|---------|
+| 🐍 Python 3.x | Programming Language |
+| 🔁 While Loop | Menu Repetition |
+| 🔂 For Loop | Pattern Printing |
+| 🔀 Match Case | Menu Handling |
+| ➗ Modulus Operator | Even/Odd Detection |
+| ⌨️ input() | User Input |
+| 🖨️ print() | Output Display |
+
+---
+
+# 📈 Learning Outcomes
+
+After completing this project, you will understand:
+
+- While Loops
+- Nested Loops
+- Match Case Statements
+- Pattern Printing Logic
+- Even/Odd Number Detection
+- Sum Calculation
+- Menu Driven Programming
+- User Input Handling
+
+---
+
+# 🏆 Advantages
 
 | Advantage | Detail |
 |-----------|--------|
-| 🎓 **Beginner Friendly** | Core concepts: loops, conditionals, and I/O in one project |
-| 🔄 **Reusability** | Pattern logic can be extracted into reusable functions |
-| 📚 **Educational** | Each pattern reinforces nested loop reasoning and spacing math |
-| 🖥️ **No Dependencies** | Runs with pure Python — no external libraries needed |
-| ⚡ **Lightweight** | Single-file script, instantly runnable from any terminal |
-| 🧪 **Extensible** | Easy to add new patterns (Diamond, Hollow Triangle, etc.) |
-| 📖 **Readable Code** | Clear `if-elif-else` structure makes logic easy to follow |
-| 🛡️ **Input Safety** | Invalid menu and pattern choices are caught and reported |
+| 🎓 Beginner Friendly | Excellent practice project |
+| 📚 Educational | Covers loops and conditions |
+| ⚡ Lightweight | No external libraries |
+| 🔄 Reusable Logic | Easy to extend |
+| 🖥️ Console Based | Runs on any system |
+| 🧠 Improves Logic Building | Strengthens programming fundamentals |
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for full details.
-
-```
-MIT License — Free to use, modify, and distribute with attribution.
-```
-
----
-
-## 👤 Author
+# 👤 Author
 
 <div align="center">
 
-### Ayush Isamaliya
+### Prit Baldha
 
-[![GitHub](https://img.shields.io/badge/GitHub-yourhandle-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/isamaliya16)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayush-isamaliya-686533312/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pritbaldha54-collab)
 
-> *"Every pattern starts with a single star — just like every program starts with a single line."*
+> "Learning Python one project at a time."
 
-**🎓 Role:** Junior Python Developer | Programming Enthusiast \
-**📍 Location:** India\
-**🛠️ Skills:** Python · Loops · CLI Applications · Logic Building · Pattern Programming
+**🎓 Role:** Python Developer & Programming Learner
+
+**🛠️ Skills:** Python · Problem Solving · Pattern Programming · CLI Applications
+
+GitHub: https://github.com/pritbaldha54-collab
 
 </div>
 
 ---
 
-## 🙏 Acknowledgements
+# 📄 License
 
-Special thanks to the following resources and communities that made this project possible:
+This project is licensed under the MIT License.
 
-- 📚 [Python Official Docs](https://docs.python.org/3/) — Official Python language reference
-- 🔁 [Real Python — Loops](https://realpython.com/python-for-loop/) — In-depth loop tutorials
-- 📐 [GeeksForGeeks — Patterns](https://www.geeksforgeeks.org/programs-printing-pyramid-patterns-python/) — Pattern printing examples
-- 🖥️ [W3Schools Python](https://www.w3schools.com/python/) — Beginner Python reference
-- 🧮 [Python f-strings Guide](https://realpython.com/python-f-strings/) — Formatted string literals
-- 💬 [Stack Overflow Community](https://stackoverflow.com/) — Problem-solving support
-- 📖 [Kaggle Learn](https://www.kaggle.com/learn) — Python and programming courses
+```text
+MIT License - Free to use, modify and distribute with attribution.
+```
 
 ---
 
 <div align="center">
 
----
+### ⭐ If you found this project useful, consider giving it a star!
 
-*Made with ❤️ and ☕ — Last updated: 27 May, 2026*
+Made with ❤️ using Python
 
 </div>
