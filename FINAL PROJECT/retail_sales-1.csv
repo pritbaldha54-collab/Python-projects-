@@ -1,0 +1,13 @@
+Sale_ID,Date,Category,Product,Quantity,Unit_Price,Total_Sales
+1,2026-01-05,Electronics,Laptop,2,55000,110000
+2,2026-01-06,Electronics,Smartphone,3,25000,75000
+3,2026-01-08,Clothing,T-Shirt,10,500,5000
+4,2026-01-10,Clothing,Jeans,5,1200,6000
+5,2026-01-12,Grocery,Rice,20,80,1600
+6,2026-01-15,Grocery,Oil,15,150,2250
+7,2026-01-18,Electronics,Laptop,1,55000,55000
+8,2026-01-20,Electronics,Headphones,8,1500,12000
+9,2026-01-22,Clothing,T-Shirt,12,500,6000
+10,2026-01-25,Grocery,Rice,25,80,2000
+11,2026-01-27,Electronics,Smartphone,2,25000,50000
+12,2026-01-30,Clothing,Jeans,7,1200,8400
